@@ -1,10 +1,60 @@
 @charset "UTF-8";
 
+:root {
+    
+    --cor0:#734347;
+    --cor1:#0C4459;
+    --cor2:#0c81ac;
+    --cor3:#04BF55;
+    --cor4:#0cea5e;
+    --cor5:#F28B0C;
+    --cor6:#403d3d;
+
+
+}
+
+
+
+
+
 * {
     margin: 0px;
     padding: 0px;
 }
 
 header {
+    background-color:var(--cor2) ;
+    padding-bottom: 10px ;
+    text-align: center;
     
 }
+
+header > img {
+    max-width: 200px;
+    height:200px;
+    margin-top: -25px;
+    margin-bottom:-20px ;
+    width: auto;
+}
+
+nav {
+    background: var(--cor6);
+    text-align: center;
+    padding-bottom: 5px;
+  
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+  nav ul li {
+    text-align: center;
+    font-family: var(--fonte2);
+}
+
+
+
