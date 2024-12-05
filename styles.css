@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* styles.css */
+:root {
+    --primary-color: #1e90ff;
+    --secondary-color: #f4f4f4;
+    --dark-color: #333;
+    --highlight-color: #ffdd57;
+    --transition-speed: 0.3s;
+
+
+
+    --fonte01: "Poppins", sans-serif;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(6, 173, 28);
+    color: var(--dark-color);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 20px; /* Reduzido o espaçamento vertical */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 100px; /* Ajusta altura dinamicamente */
+  }
+  
+  .logo img {
+    width: 150px; /* Tamanho padrão para telas maiores */
+    height: auto; /* Mantém proporção da imagem */
+    transition: width 0.3s ease; /* Transição suave ao redimensionar */
+  }
+  
+  nav {
+    position: relative;
+    padding-right: 20px;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: var(--transition-speed);
+  }
+  
+  #nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  #nav-links li a {
+    text-decoration: none;
+    color: white;
+    transition: color var(--transition-speed);
+  }
+  
+  #nav-links li a:hover {
+    color: var(--highlight-color);
+  }
+  
+  .hero {
+    font-family: var(--fonte01) ;
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url(images/pexels-pixabay-159213.jpg);
+    background-repeat: none;
+    background-position: 80%;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+  }
+  
+  .hero .btn {
+    padding: 10px 20px;
+    background-color: var(--highlight-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+  }
+  
+  .hero .btn:hover {
+    background-color: #ffc107;
+    transform: scale(1.1);
+  }
+  
+  .animated-text {
+    font-size: 28px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .animated-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-speed);
+  }
+  
+  .animated-text:hover::after {
+    transform: scaleX(1);
+  }
+ 
+
+  
+  .blocks {
+    padding: 10px 10px;
+    background-color: #ddb821fa;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius: 20px;
+  }
+
+  
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .card, .image-block {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  .card:hover, .image-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.63);
+  }
+  
+  .image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+  }
+  
+  .footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Opcional: ícones redondos */
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2); /* Zoom ao passar o mouse */
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  
+  /* Menu Hambúrguer no Modo Mobile */
+  #nav-links {
+    display: flex;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+
+    .logo img {
+        width: 120px; /* Reduz o tamanho para telas menores */
+      }
+    
+
+  
+    #nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Alinha logo abaixo do header */
+      right: 10px; /* Mantém uma margem lateral */
+      background-color: rgba(79, 76, 76, 0.537);
+      padding: 10px;
+      border-radius: 8px; /* Borda arredondada */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para realce */
+      z-index: 999;
+    }
+  
+    #nav-links.active {
+      display: flex;
+    }
+  
+    #nav-links li {
+      margin: 10px 0; /* Espaçamento vertical entre os links */
+    }
+  
+    #nav-links li a {
+      text-align: center;
+      font-size: 16px;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+  
+    #nav-links li a:hover {
+      color: var(--highlight-color);
+    }
+  }
+  
+  
+  
+  @media (max-width: 480px) {
+    .logo img {
+        width: 100px; /* Tamanho ainda menor para telas muito pequenas */
+      }
+    
+  
+    .hero h2 {
+      font-size: 20px;
+    }
+  }
