@@ -90,7 +90,8 @@
   
   .hero .btn {
     padding: 10px 20px;
-    background-color: var(--highlight-color);
+    background-color: rgb(101, 37, 37);
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -99,7 +100,7 @@
   }
   
   .hero .btn:hover {
-    background-color: #ffc107;
+    background-color: #873923;
     transform: scale(1.1);
   }
   
@@ -109,6 +110,7 @@
     position: relative;
     overflow: hidden;
     color: white;
+    font-family: var(--fonte01);
   }
   
   .animated-text::after {
@@ -157,12 +159,16 @@
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.63);
   }
+
+
   
   .image-block img {
     width: 100%;
     height: auto;
     border-radius: 10px;
   }
+
+ 
   
   footer {
     background-color: #333;
@@ -263,6 +269,17 @@
     #nav-links li a:hover {
       color: var(--highlight-color);
     }
+
+    .image-block:nth-child(3) {
+        grid-column: 1 / -1; /* Faz o card ocupar toda a largura */
+        justify-self: center; /* Centraliza o card horizontalmente */
+       
+      }
+
+      .card:nth-child(3) {
+        grid-column: 1 / -1; /* Faz o card ocupar toda a largura */
+        justify-self: center; /* Centraliza o card horizontalmente */
+      }
   }
   
   
